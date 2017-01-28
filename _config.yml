@@ -3,11 +3,6 @@ title: "MPDieckmann"
 sidebar: "sidebar-widgets.html"
 footer: "footer-widgets.html"
 
-collections:
-  repositories:
-    output: true
-    permalink: /:path/
-
 defaults:
   - scope:
       path: ""
@@ -22,17 +17,6 @@ defaults:
   - scope:
       path: ""
       type: "posts"
-    values:
-      showmeta: "true"
-      appbackground: "#eee"
-      cardbackground: "#fff"
-      themecolor: "#68a"
-      themedforecolor: "#fff"
-      layout: "default"
-      author: "<a href=\"https://github.com/MPDieckmann\">MPDieckmann</a>"
-  - scope:
-      path: ""
-      type: "repositories"
     values:
       showmeta: "true"
       appbackground: "#eee"
