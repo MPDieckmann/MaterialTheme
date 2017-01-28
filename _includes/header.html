@@ -47,16 +47,16 @@ a:focus,input[type="button"],input[type="submit"],input[type="reset"],button,inp
         </header-group>
 {% if site.logo %}
         <header-logo>
-          <a href="{{ "/" | relative_url }}" class="bg-img" style="background-image: url('{{ logo }}')"><img src="{{ logo }}" /></a>
+          <a href="{% if site.titlelink %}{{ site.titlelink }}{% else %}{{ "/" | relative_url }}{% endif %}" class="bg-img" style="background-image: url('{{ logo }}')"><img src="{{ logo }}" /></a>
         </header-logo>
 {% endif %}
         <header-group id="header-titles">
 {% if page.hidetitle %}
-          <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+          <h1><a href="{% if site.titlelink %}{{ site.titlelink }}{% else %}{{ "/" | relative_url }}{% endif %}">{{ site.title }}</a></h1>
 {% if site.subtitle %}
           <div>{{ site.subtitle }}</div>
 {% endif %}{% else %}
-          <div class="headline"><a href="{{ "/" | relative_url }}">{{ site.title }}</a></div>
+          <div class="headline"><a href="{% if site.titlelink %}{{ site.titlelink }}{% else %}{{ "/" | relative_url }}{% endif %}">{{ site.title }}</a></div>
 {% if page.title %}
           <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
 {% if page.subtitle %}
